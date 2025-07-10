@@ -1,6 +1,0 @@
-setup.py
-hiwonder_servo_msgs/__init__.py
-hiwonder_servo_msgs.egg-info/PKG-INFO
-hiwonder_servo_msgs.egg-info/SOURCES.txt
-hiwonder_servo_msgs.egg-info/dependency_links.txt
-hiwonder_servo_msgs.egg-info/top_level.txt

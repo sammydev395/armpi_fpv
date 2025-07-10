@@ -1,31 +1,37 @@
-# Docker and build artifacts
-*.log
-.DS_Store
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ROS 1 (if any remnants)
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
 
 # Temporary files
 *.tmp
-*.bak
-*~
-
-# Docker volumes and data
-docker_data/
-volumes/
-
-# SSH keys (keep private)
-*.pem
-*.key
-id_rsa*
-id_ed25519*
-
-# OS generated files
-Thumbs.db
-.Spotlight-V100
-.Trashes
-
-# ArmPi FPV source code (separate repository)
-# armpi_fpv/
-# course/
-software/
-docker_src/
+*.temp

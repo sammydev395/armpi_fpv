@@ -1,1 +1,0 @@
-# Armpi FPV Kinematics Package for ROS 2 

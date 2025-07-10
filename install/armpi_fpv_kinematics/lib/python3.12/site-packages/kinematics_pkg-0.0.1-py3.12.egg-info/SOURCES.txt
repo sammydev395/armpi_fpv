@@ -1,8 +1,0 @@
-setup.py
-kinematics_pkg/__init__.py
-kinematics_pkg/kinematics_control.py
-kinematics_pkg/transform.py
-kinematics_pkg.egg-info/PKG-INFO
-kinematics_pkg.egg-info/SOURCES.txt
-kinematics_pkg.egg-info/dependency_links.txt
-kinematics_pkg.egg-info/top_level.txt

@@ -1,4 +1,0 @@
-<launch>
-    <!--运动学节点(kinematics node)-->
-    <node name="kinematics" pkg="armpi_fpv_kinematics" type="search_kinematics_solutions_node.py" required="true" output="screen"/>
-</launch>

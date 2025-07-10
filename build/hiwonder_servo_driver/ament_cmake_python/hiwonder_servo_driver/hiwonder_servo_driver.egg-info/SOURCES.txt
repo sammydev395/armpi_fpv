@@ -1,8 +1,0 @@
-setup.py
-hiwonder_servo_driver/__init__.py
-hiwonder_servo_driver/hiwonder_servo_io.py
-hiwonder_servo_driver/hiwonder_servo_serialproxy.py
-hiwonder_servo_driver.egg-info/PKG-INFO
-hiwonder_servo_driver.egg-info/SOURCES.txt
-hiwonder_servo_driver.egg-info/dependency_links.txt
-hiwonder_servo_driver.egg-info/top_level.txt

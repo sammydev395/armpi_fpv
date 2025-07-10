@@ -1,8 +1,0 @@
-source;share/hiwonder_servo_driver/hook/pythonpath.ps1
-source;share/hiwonder_servo_driver/hook/pythonpath.dsv
-source;share/hiwonder_servo_driver/hook/pythonpath.sh
-source;share/hiwonder_servo_driver/local_setup.bash
-source;share/hiwonder_servo_driver/local_setup.dsv
-source;share/hiwonder_servo_driver/local_setup.ps1
-source;share/hiwonder_servo_driver/local_setup.sh
-source;share/hiwonder_servo_driver/local_setup.zsh
