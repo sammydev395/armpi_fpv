@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from armpi_fpv_kinematics/srv/SetJointValue.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module armpi_fpv_kinematics {
+  module srv {
+    struct SetJointValue_Request {
+      sequence<float> joint_value;
+    };
+    struct SetJointValue_Response {
+      boolean success;
+
+      boolean solution;
+
+      geometry_msgs::msg::Pose pose;
+    };
+  };
+};

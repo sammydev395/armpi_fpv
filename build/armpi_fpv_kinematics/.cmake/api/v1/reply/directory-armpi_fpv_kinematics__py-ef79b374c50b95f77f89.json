@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "armpi_fpv_kinematics__py",
+		"source" : "/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/armpi_fpv_kinematics__py"
+	}
+}

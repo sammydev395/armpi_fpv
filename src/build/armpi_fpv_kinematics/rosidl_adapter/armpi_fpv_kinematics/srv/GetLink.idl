@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from armpi_fpv_kinematics/srv/GetLink.srv
+// generated code does not contain a copyright notice
+
+#include "armpi_fpv_kinematics/msg/Link.idl"
+
+module armpi_fpv_kinematics {
+  module srv {
+    struct GetLink_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetLink_Response {
+      boolean success;
+
+      armpi_fpv_kinematics::msg::Link data;
+    };
+  };
+};

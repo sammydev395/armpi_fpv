@@ -1,0 +1,15 @@
+{
+  "package_name": "armpi_fpv_kinematics",
+  "non_idl_tuples": [
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:msg/JointRange.msg",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:msg/JointsRange.msg",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:msg/Link.msg",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/SetLink.srv",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/GetLink.srv",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/SetJointRange.srv",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/GetJointRange.srv",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/SetJointValue.srv",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/SetRobotPose.srv",
+    "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics:srv/GetRobotPose.srv"
+  ]
+}

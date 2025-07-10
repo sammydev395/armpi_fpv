@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from armpi_fpv_kinematics/msg/JointRange.msg
+// generated code does not contain a copyright notice
+
+
+module armpi_fpv_kinematics {
+  module msg {
+    struct JointRange {
+      double min;
+
+      double max;
+    };
+  };
+};

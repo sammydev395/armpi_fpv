@@ -1,0 +1,10 @@
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:msg/JointRange.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:msg/JointsRange.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:msg/Link.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/SetLink.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/GetLink.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/SetJointRange.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/GetJointRange.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/SetJointValue.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/SetRobotPose.idl
+/home/sammydev295/armpi_fpv/src/build/armpi_fpv_kinematics/rosidl_adapter/armpi_fpv_kinematics:srv/GetRobotPose.idl

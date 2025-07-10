@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "armpi_fpv_kinematics/srv/GetRobotPose_Request",
+      "fields": [
+        {
+          "name": "structure_needs_at_least_one_member",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "armpi_fpv_kinematics/srv/GetRobotPose_Request",
+      "hash_string": "RIHS01_8bff36ceff27be6332b42bc636c5c713729b65c9f7aa98238eb77694d0e11c05"
+    }
+  ]
+}

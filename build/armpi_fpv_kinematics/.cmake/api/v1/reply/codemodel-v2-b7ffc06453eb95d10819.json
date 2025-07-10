@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-80562e945071c2d7857a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "armpi_fpv_kinematics__py",
+					"jsonFile" : "directory-armpi_fpv_kinematics__py-ef79b374c50b95f77f89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/armpi_fpv_kinematics__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "armpi_fpv_kinematics",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_armpi_fpv_kinematics_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_armpi_fpv_kinematics_egg-74bb164338a42f87d751.json",
+					"name" : "ament_cmake_python_build_armpi_fpv_kinematics_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_armpi_fpv_kinematics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_armpi_fpv_kinematics-879b2a5ebc5abc35cbc4.json",
+					"name" : "ament_cmake_python_copy_armpi_fpv_kinematics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics-b92ab10564db26100f46.json",
+					"name" : "armpi_fpv_kinematics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__cpp-196d13b55a3bc0acb46e.json",
+					"name" : "armpi_fpv_kinematics__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "armpi_fpv_kinematics__py::@1a57d0a8a0f7861d3762",
+					"jsonFile" : "target-armpi_fpv_kinematics__py-66426b028588cd9dd610.json",
+					"name" : "armpi_fpv_kinematics__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_generator_c-98dcd3b59214874c8164.json",
+					"name" : "armpi_fpv_kinematics__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_generator_py-c5977d1caa6ab8a15393.json",
+					"name" : "armpi_fpv_kinematics__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_generator_type_description-9ba074ccbe6a60f3179f.json",
+					"name" : "armpi_fpv_kinematics__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_typesupport_c-3d7db63129087e023629.json",
+					"name" : "armpi_fpv_kinematics__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_typesupport_cpp-a8ed25abbd12c524b5b9.json",
+					"name" : "armpi_fpv_kinematics__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_typesupport_fastrtps_c-f60f01099c536faa551e.json",
+					"name" : "armpi_fpv_kinematics__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_typesupport_fastrtps_cpp-79bb96866dc82ab49f4f.json",
+					"name" : "armpi_fpv_kinematics__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_typesupport_introspection_c-09d2a3530231105011e2.json",
+					"name" : "armpi_fpv_kinematics__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics__rosidl_typesupport_introspection_cpp-4f5c8c743157bdf27193.json",
+					"name" : "armpi_fpv_kinematics__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics_s__rosidl_typesupport_c-9df7a986ce9f41d36508.json",
+					"name" : "armpi_fpv_kinematics_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c-7ac8ef7d457b904a2717.json",
+					"name" : "armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c-379e8beb5c1f34837b56.json",
+					"name" : "armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armpi_fpv_kinematics_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armpi_fpv_kinematics_uninstall-93bf8edeaed06e0d6f8e.json",
+					"name" : "armpi_fpv_kinematics_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-201e9f5b99c92302832c.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics",
+		"source" : "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

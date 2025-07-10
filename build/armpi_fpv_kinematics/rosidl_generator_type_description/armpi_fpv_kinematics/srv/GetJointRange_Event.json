@@ -1,0 +1,261 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "armpi_fpv_kinematics/srv/GetJointRange_Event",
+      "fields": [
+        {
+          "name": "info",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "request",
+          "type": {
+            "type_id": 97,
+            "capacity": 1,
+            "string_capacity": 0,
+            "nested_type_name": "armpi_fpv_kinematics/srv/GetJointRange_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response",
+          "type": {
+            "type_id": 97,
+            "capacity": 1,
+            "string_capacity": 0,
+            "nested_type_name": "armpi_fpv_kinematics/srv/GetJointRange_Response"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "armpi_fpv_kinematics/msg/JointRange",
+        "fields": [
+          {
+            "name": "min",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "max",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "armpi_fpv_kinematics/msg/JointsRange",
+        "fields": [
+          {
+            "name": "joint1",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "armpi_fpv_kinematics/msg/JointRange"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "joint2",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "armpi_fpv_kinematics/msg/JointRange"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "joint3",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "armpi_fpv_kinematics/msg/JointRange"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "joint4",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "armpi_fpv_kinematics/msg/JointRange"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "joint5",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "armpi_fpv_kinematics/msg/JointRange"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "armpi_fpv_kinematics/srv/GetJointRange_Request",
+        "fields": [
+          {
+            "name": "structure_needs_at_least_one_member",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "armpi_fpv_kinematics/srv/GetJointRange_Response",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "data",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "armpi_fpv_kinematics/msg/JointsRange"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "armpi_fpv_kinematics/srv/GetJointRange_Event",
+      "hash_string": "RIHS01_37713abc3936ca7baea7fae998ba7deb6b569e762e3c0ceb04127a5767decfb3"
+    },
+    {
+      "type_name": "armpi_fpv_kinematics/msg/JointRange",
+      "hash_string": "RIHS01_d40c67f491ba1279f75d89d57b327da39d543ec79a646bbbcbc44852612887f7"
+    },
+    {
+      "type_name": "armpi_fpv_kinematics/msg/JointsRange",
+      "hash_string": "RIHS01_28119c48a75699affbb2660acaa1710d5f68a302bf7f87b163ab850cac543a1d"
+    },
+    {
+      "type_name": "armpi_fpv_kinematics/srv/GetJointRange_Request",
+      "hash_string": "RIHS01_1ae21d0dc04cd845c629963d597ba4ea720315d852630c089ec9ea7c447d5f4a"
+    },
+    {
+      "type_name": "armpi_fpv_kinematics/srv/GetJointRange_Response",
+      "hash_string": "RIHS01_02768d03f4ef51ce8f703520503810379b9a7c50f2d2f9a34d0a0230e894ef32"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

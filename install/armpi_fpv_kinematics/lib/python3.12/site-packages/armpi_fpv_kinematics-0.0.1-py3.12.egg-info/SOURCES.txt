@@ -1,0 +1,6 @@
+setup.py
+armpi_fpv_kinematics/__init__.py
+armpi_fpv_kinematics.egg-info/PKG-INFO
+armpi_fpv_kinematics.egg-info/SOURCES.txt
+armpi_fpv_kinematics.egg-info/dependency_links.txt
+armpi_fpv_kinematics.egg-info/top_level.txt

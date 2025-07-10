@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from armpi_fpv_kinematics/srv/SetRobotPose.srv
+// generated code does not contain a copyright notice
+
+
+module armpi_fpv_kinematics {
+  module srv {
+    struct SetRobotPose_Request {
+      sequence<double> position;
+
+      double pitch;
+
+      sequence<double> pitch_range;
+
+      double roll;
+
+      double resolution;
+    };
+    struct SetRobotPose_Response {
+      boolean success;
+
+      sequence<double> pulse;
+
+      sequence<uint16> current_pulse;
+
+      sequence<double> rpy;
+
+      double min_variation;
+    };
+  };
+};
