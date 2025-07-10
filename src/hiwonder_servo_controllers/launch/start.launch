@@ -1,9 +1,40 @@
-<?xml version="1.0"?>
-<launch>
-    <arg name="base_frame"  default="base_link"/>
-    <include file="$(find hiwonder_servo_controllers)/launch/controller_manager.launch"/>
+#!/usr/bin/env python3
 
-    <include file="$(find hiwonder_servo_controllers)/launch/joint_states_publisher.launch">
-        <arg name="base_frame"  value="$(arg base_frame)"/>
-    </include>
-</launch>
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+from ament_index_python.packages import get_package_share_directory
+import os
+
+def generate_launch_description():
+    # Get the package directory
+    pkg_share = get_package_share_directory('hiwonder_servo_controllers')
+    
+    # Declare launch arguments
+    base_frame = LaunchConfiguration('base_frame')
+    
+    # Define the launch description
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'base_frame',
+            default_value='base_link',
+            description='Base frame for joint states'
+        ),
+        
+        # Include controller manager launch
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                os.path.join(pkg_share, 'launch', 'controller_manager.launch.py')
+            ])
+        ),
+        
+        # Include joint states publisher launch
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                os.path.join(pkg_share, 'launch', 'joint_states_publisher.launch.py')
+            ]),
+            launch_arguments={'base_frame': base_frame}.items()
+        )
+    ])

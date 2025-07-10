@@ -1,7 +1,27 @@
-<?xml version="1.0"?>
-<launch>
-    <arg name="base_frame"  default="base_link"/>
-    <node name="joint_states_publisher" pkg="hiwonder_servo_controllers" type="joint_state_publisher.py" output="screen">
-        <param name="base_frame"    value="$(arg base_frame)"/>
-    </node>
-</launch>
+#!/usr/bin/env python3
+
+from launch import LaunchDescription
+from launch_ros.actions import Node
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+
+def generate_launch_description():
+    # Declare launch arguments
+    base_frame = LaunchConfiguration('base_frame')
+    
+    # Define the launch description
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'base_frame',
+            default_value='base_link',
+            description='Base frame for joint states'
+        ),
+        
+        Node(
+            package='hiwonder_servo_controllers',
+            executable='joint_state_publisher.py',
+            name='joint_states_publisher',
+            output='screen',
+            parameters=[{'base_frame': base_frame}]
+        )
+    ])

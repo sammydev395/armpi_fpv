@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 # encoding: utf-8
-import rospy
+import rclpy
 from hiwonder_servo_controllers.joint_controller import JointController
 from hiwonder_servo_msgs.msg import JointState
 
 
 class JointPositionController(JointController):
     def __init__(self, servo_io, controller_namespace, param_namespace, port_id):
-        JointController.__init__(self, servo_io, controller_namespace, param_namespace, port_id)
+        super().__init__(servo_io, controller_namespace, param_namespace, port_id)
 
         self.controller_namespace = controller_namespace
         self.param_namespace = param_namespace
         self.port_id = str(port_id)
 
-        self.servo_id = rospy.get_param(self.param_namespace + '/servo/id')
-        self.initial_position_raw = rospy.get_param(self.param_namespace + '/servo/init')
-        self.min_angle_raw = rospy.get_param(self.param_namespace + '/servo/min')
-        self.max_angle_raw = rospy.get_param(self.param_namespace + '/servo/max')
-        if rospy.has_param(self.param_namespace + '/servo/acceleration'):
-            self.acceleration = rospy.get_param(self.param_namespace + '/servo/acceleration')
+        self.servo_id = self.get_parameter(self.param_namespace + '/servo/id').value
+        self.initial_position_raw = self.get_parameter(self.param_namespace + '/servo/init').value
+        self.min_angle_raw = self.get_parameter(self.param_namespace + '/servo/min').value
+        self.max_angle_raw = self.get_parameter(self.param_namespace + '/servo/max').value
+        if self.has_parameter(self.param_namespace + '/servo/acceleration'):
+            self.acceleration = self.get_parameter(self.param_namespace + '/servo/acceleration').value
         else:
             self.acceleration = None
 
@@ -28,20 +28,19 @@ class JointPositionController(JointController):
 
     def initialize(self, angle_range=240):
         # verify that the expected motor is connected and responding
-        # available_ids = rospy.get_param('%s/serial_ports/%s/connected_ids' % (rospy.get_name(), self.port_namespace),
-        #                                 [])
+        # available_ids = self.get_parameter('%s/serial_ports/%s/connected_ids' % (self.get_name(), self.port_namespace)).value
         # if not self.servo_id in available_ids:
-        #     rospy.logwarn('The specified servo id is not connected and responding.')
-        #     rospy.logwarn('Available ids: %s' % str(available_ids))
-        #     rospy.logwarn('Specified id: %d' % self.servo_id)
+        #     self.get_logger().warn('The specified servo id is not connected and responding.')
+        #     self.get_logger().warn('Available ids: %s' % str(available_ids))
+        #     self.get_logger().warn('Specified id: %d' % self.servo_id)
         #     return False
 
         self.RADIANS_PER_ENCODER_TICK = angle_range / 360 * (3.1415926 * 2) / 1000
-        # self.RADIANS_PER_ENCODER_TICK = rospy.get_param(
-        # 'hiwonder_servo/%s/%d/radians_per_encoder_tick' % (self.port_namespace, self.servo_id))
+        # self.RADIANS_PER_ENCODER_TICK = self.get_parameter(
+        # 'hiwonder_servo/%s/%d/radians_per_encoder_tick' % (self.port_namespace, self.servo_id)).value
         self.ENCODER_TICKS_PER_RADIAN = 1000 / (angle_range / 360 * (3.1415926 * 2))
-        # self.ENCODER_TICKS_PER_RADIAN = rospy.get_param(
-        # 'hiwonder_servo/%s/%d/encoder_ticks_per_radian' % (self.port_namespace, self.servo_id))
+        # self.ENCODER_TICKS_PER_RADIAN = self.get_parameter(
+        # 'hiwonder_servo/%s/%d/encoder_ticks_per_radian' % (self.port_namespace, self.servo_id)).value
 
         if self.flipped:
             self.min_angle = (self.initial_position_raw - self.min_angle_raw) * self.RADIANS_PER_ENCODER_TICK
@@ -50,13 +49,13 @@ class JointPositionController(JointController):
             self.min_angle = (self.min_angle_raw - self.initial_position_raw) * self.RADIANS_PER_ENCODER_TICK
             self.max_angle = (self.max_angle_raw - self.initial_position_raw) * self.RADIANS_PER_ENCODER_TICK
 
-        self.ENCODER_RESOLUTION = 1000  # rospy.get_param(
-        # 'hiwonder_servo/%s/%d/encoder_resolution' % (self.port_namespace, self.servo_id))
+        self.ENCODER_RESOLUTION = 1000  # self.get_parameter(
+        # 'hiwonder_servo/%s/%d/encoder_resolution' % (self.port_namespace, self.servo_id)).value
         self.MAX_POSITION = self.ENCODER_RESOLUTION - 1
-        self.VELOCITY_PER_TICK = 10  # rospy.get_param(
-        # 'hiwonder_servo/%s/%d/radians_second_per_encoder_tick' % (self.port_namespace, self.servo_id))
+        self.VELOCITY_PER_TICK = 10  # self.get_parameter(
+        # 'hiwonder_servo/%s/%d/radians_second_per_encoder_tick' % (self.port_namespace, self.servo_id)).value
         self.MAX_VELOCITY = 100
-        # rospy.get_param('hiwonder_servo/%s/%d/max_velocity' % (self.port_namespace, self.servo_id))
+        # self.get_parameter('hiwonder_servo/%s/%d/max_velocity' % (self.port_namespace, self.servo_id)).value
         self.MIN_VELOCITY = self.VELOCITY_PER_TICK
 
         return True
@@ -89,7 +88,7 @@ class JointPositionController(JointController):
                                                                self.RADIANS_PER_ENCODER_TICK)
                 self.joint_state.error = state.error * self.RADIANS_PER_ENCODER_TICK
                 self.joint_state.velocity = 10  # state.speed * self.VELOCITY_PER_TICK
-                self.joint_state.header.stamp = rospy.Time.from_sec(state.timestamp)
+                self.joint_state.header.stamp = self.get_clock().now().to_msg()
                 self.joint_state_pub.publish(self.joint_state)
 
     def process_command(self, msg):
