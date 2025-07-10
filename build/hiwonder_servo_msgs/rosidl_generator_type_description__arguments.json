@@ -1,0 +1,21 @@
+{
+  "package_name": "hiwonder_servo_msgs",
+  "output_dir": "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_generator_type_description/hiwonder_servo_msgs",
+  "idl_tuples": [
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/JointState.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/ServoState.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/ServoStateList.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/CommandDuration.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/CommandDurationList.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/RawIdPosDur.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:msg/MultiRawIdPosDur.idl",
+    "/home/sammydev295/armpi_fpv/build/hiwonder_servo_msgs/rosidl_adapter/hiwonder_servo_msgs:action/ActionGroupRunner.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs"
+  ]
+}

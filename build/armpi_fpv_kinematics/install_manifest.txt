@@ -262,5 +262,12 @@
 /home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/share/armpi_fpv_kinematics/srv/SetJointValue.srv
 /home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/share/armpi_fpv_kinematics/srv/SetRobotPose.srv
 /home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/share/armpi_fpv_kinematics/srv/GetRobotPose.srv
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg-0.0.1-py3.12.egg-info/dependency_links.txt
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg-0.0.1-py3.12.egg-info/PKG-INFO
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg-0.0.1-py3.12.egg-info/top_level.txt
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg-0.0.1-py3.12.egg-info/SOURCES.txt
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg/kinematics_control.py
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg/transform.py
+/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg/__init__.py
 /home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/armpi_fpv_kinematics/search_kinematics_solutions_node.py
 /home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/share/armpi_fpv_kinematics/launch/kinematics_node.launch

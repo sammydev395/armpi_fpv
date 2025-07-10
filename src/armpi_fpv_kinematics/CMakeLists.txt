@@ -26,8 +26,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES geometry_msgs
 )
 
-# Re-enable Python package installation
-ament_python_install_package(${PROJECT_NAME})
+# Re-enable Python package installation with new name
+ament_python_install_package(kinematics_pkg)
 
 # Install Python scripts
 install(PROGRAMS

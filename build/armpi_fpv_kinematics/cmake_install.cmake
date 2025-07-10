@@ -479,6 +479,22 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/kinematics_pkg-0.0.1-py3.12.egg-info" TYPE DIRECTORY FILES "/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/ament_cmake_python/kinematics_pkg/kinematics_pkg.egg-info/")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/kinematics_pkg" TYPE DIRECTORY FILES "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics/kinematics_pkg/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(
+        COMMAND
+        "/usr/bin/python3" "-m" "compileall"
+        "/home/sammydev295/armpi_fpv/install/armpi_fpv_kinematics/lib/python3.12/site-packages/kinematics_pkg"
+      )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/armpi_fpv_kinematics" TYPE PROGRAM FILES "/home/sammydev295/armpi_fpv/src/armpi_fpv_kinematics/scripts/search_kinematics_solutions_node.py")
 endif()
 

@@ -406,6 +406,32 @@ armpi_fpv_kinematics_s__rosidl_typesupport_c/fast:
 .PHONY : armpi_fpv_kinematics_s__rosidl_typesupport_c/fast
 
 #=============================================================================
+# Target rules for targets named ament_cmake_python_copy_kinematics_pkg
+
+# Build rule for target.
+ament_cmake_python_copy_kinematics_pkg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_kinematics_pkg
+.PHONY : ament_cmake_python_copy_kinematics_pkg
+
+# fast build rule for target.
+ament_cmake_python_copy_kinematics_pkg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/build.make CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/build
+.PHONY : ament_cmake_python_copy_kinematics_pkg/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_build_kinematics_pkg_egg
+
+# Build rule for target.
+ament_cmake_python_build_kinematics_pkg_egg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_build_kinematics_pkg_egg
+.PHONY : ament_cmake_python_build_kinematics_pkg_egg
+
+# fast build rule for target.
+ament_cmake_python_build_kinematics_pkg_egg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/build
+.PHONY : ament_cmake_python_build_kinematics_pkg_egg/fast
+
+#=============================================================================
 # Target rules for targets named armpi_fpv_kinematics__py
 
 # Build rule for target.
@@ -2904,7 +2930,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_armpi_fpv_kinematics_egg"
+	@echo "... ament_cmake_python_build_kinematics_pkg_egg"
 	@echo "... ament_cmake_python_copy_armpi_fpv_kinematics"
+	@echo "... ament_cmake_python_copy_kinematics_pkg"
 	@echo "... armpi_fpv_kinematics"
 	@echo "... armpi_fpv_kinematics__cpp"
 	@echo "... armpi_fpv_kinematics__py"

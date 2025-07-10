@@ -501,6 +501,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ament_cmake_environment_hooks/library_path.dsv"
   "ament_cmake_environment_hooks/pythonpath.dsv"
   "ament_cmake_python/armpi_fpv_kinematics/setup.py"
+  "ament_cmake_python/kinematics_pkg/setup.py"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/armpi_fpv_kinematics__py/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -525,5 +526,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake"
   "CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/DependInfo.cmake"
   "CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/DependInfo.cmake"
+  "CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/DependInfo.cmake"
+  "CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/DependInfo.cmake"
   "/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir/DependInfo.cmake"
   )

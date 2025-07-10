@@ -16,6 +16,8 @@
 /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir
 /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir
 /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir
+/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir
+/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir
 /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/test.dir
 /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/edit_cache.dir
 /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles/rebuild_cache.dir

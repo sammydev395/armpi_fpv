@@ -76,6 +76,7 @@ all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all
 all: CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all
 all: CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all
 all: CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all
+all: CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/all
 all: armpi_fpv_kinematics__py/all
 .PHONY : all
 
@@ -102,6 +103,8 @@ clean: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/clean
 clean: CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/clean
 clean: CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/clean
 clean: CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/clean
+clean: CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/clean
+clean: CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/clean
 clean: armpi_fpv_kinematics__py/clean
 .PHONY : clean
 
@@ -176,15 +179,15 @@ CMakeFiles/armpi_fpv_kinematics_uninstall.dir/clean:
 # Target rules for target CMakeFiles/armpi_fpv_kinematics.dir
 
 # All Build rule for target.
+CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
+CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_introspection_cpp.dir/all
+CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_cpp.dir/all
 CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_type_description.dir/all
 CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_c.dir/all
 CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_fastrtps_c.dir/all
 CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__cpp.dir/all
 CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_fastrtps_cpp.dir/all
 CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_introspection_c.dir/all
-CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
-CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_introspection_cpp.dir/all
-CMakeFiles/armpi_fpv_kinematics.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics.dir/build.make CMakeFiles/armpi_fpv_kinematics.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics.dir/build.make CMakeFiles/armpi_fpv_kinematics.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num= "Built target armpi_fpv_kinematics"
@@ -499,9 +502,9 @@ CMakeFiles/ament_cmake_python_build_armpi_fpv_kinematics_egg.dir/clean:
 # Target rules for target CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir
 
 # All Build rule for target.
+CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
 CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all: armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir/all
 CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_c.dir/all
-CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/build.make CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/build.make CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36 "Built target armpi_fpv_kinematics__rosidl_generator_py"
@@ -527,11 +530,11 @@ CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/clean:
 # Target rules for target CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir
 
 # All Build rule for target.
+CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
+CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_c.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_fastrtps_c.dir/all
-CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
-CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num=97,98 "Built target armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c"
@@ -557,11 +560,11 @@ CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_fastrtps_c.dir/clean:
 # Target rules for target CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir
 
 # All Build rule for target.
+CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
+CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_c.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_introspection_c.dir/all
-CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
-CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num=99,100 "Built target armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c"
@@ -587,10 +590,10 @@ CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_introspection_c.dir/clean:
 # Target rules for target CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir
 
 # All Build rule for target.
-CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all: armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir/all
-CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_c.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_typesupport_c.dir/all
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_py.dir/all
+CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all: armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir/all
+CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/all: CMakeFiles/armpi_fpv_kinematics__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num=96 "Built target armpi_fpv_kinematics_s__rosidl_typesupport_c"
@@ -611,6 +614,58 @@ armpi_fpv_kinematics_s__rosidl_typesupport_c: CMakeFiles/armpi_fpv_kinematics_s_
 CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/build.make CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/clean
 .PHONY : CMakeFiles/armpi_fpv_kinematics_s__rosidl_typesupport_c.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir
+
+# All Build rule for target.
+CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/build.make CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/build.make CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_kinematics_pkg"
+.PHONY : CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles 0
+.PHONY : CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/rule
+
+# Convenience name for target.
+ament_cmake_python_copy_kinematics_pkg: CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/rule
+.PHONY : ament_cmake_python_copy_kinematics_pkg
+
+# clean rule for target.
+CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/build.make CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir
+
+# All Build rule for target.
+CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/all: CMakeFiles/ament_cmake_python_copy_kinematics_pkg.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles --progress-num= "Built target ament_cmake_python_build_kinematics_pkg_egg"
+.PHONY : CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/CMakeFiles 0
+.PHONY : CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/rule
+
+# Convenience name for target.
+ament_cmake_python_build_kinematics_pkg_egg: CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/rule
+.PHONY : ament_cmake_python_build_kinematics_pkg_egg
+
+# clean rule for target.
+CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_build_kinematics_pkg_egg.dir/clean
 
 #=============================================================================
 # Target rules for target /home/sammydev295/armpi_fpv/build/armpi_fpv_kinematics/armpi_fpv_kinematics__py/CMakeFiles/armpi_fpv_kinematics__py.dir

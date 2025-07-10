@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from hiwonder_servo_msgs/msg/CommandDuration.msg
+// generated code does not contain a copyright notice
+
+
+module hiwonder_servo_msgs {
+  module msg {
+    struct CommandDuration {
+      double data;
+
+      double duration;
+    };
+  };
+};

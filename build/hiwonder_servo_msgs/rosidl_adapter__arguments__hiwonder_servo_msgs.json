@@ -1,0 +1,13 @@
+{
+  "package_name": "hiwonder_servo_msgs",
+  "non_idl_tuples": [
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/JointState.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/ServoState.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/ServoStateList.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/CommandDuration.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/CommandDurationList.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/RawIdPosDur.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:msg/MultiRawIdPosDur.msg",
+    "/home/sammydev295/armpi_fpv/src/hiwonder_servo_msgs:action/ActionGroupRunner.action"
+  ]
+}

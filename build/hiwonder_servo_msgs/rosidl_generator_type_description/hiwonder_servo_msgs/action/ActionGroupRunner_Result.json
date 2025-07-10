@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Result",
+      "fields": [
+        {
+          "name": "name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Result",
+      "hash_string": "RIHS01_e40e1188ea30f45798399a8a9c308869441e026c1a21fa67d775747fb8652e05"
+    }
+  ]
+}

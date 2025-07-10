@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-package_name = 'armpi_fpv_kinematics'
+package_name = 'kinematics_pkg'
 
 setup(
     name=package_name,
@@ -16,10 +16,5 @@ setup(
     description='Armpi FPV Kinematics package for ROS 2',
     license='BSD',
     tests_require=['pytest'],
-    entry_points={
-        'console_scripts': [
-            'search_kinematics_solutions_node = armpi_fpv_kinematics.search_kinematics_solutions_node:main',
-        ],
-    },
 )
 

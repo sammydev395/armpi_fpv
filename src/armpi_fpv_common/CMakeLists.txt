@@ -1,31 +1,15 @@
-cmake_minimum_required(VERSION 3.0.2)
-
+cmake_minimum_required(VERSION 3.8)
 project(armpi_fpv_common)
 
-find_package(catkin REQUIRED COMPONENTS
-  rospy
-)
-catkin_python_setup()
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES hiwonder_sdk 
-  CATKIN_DEPENDS rospy
-#  DEPENDS system_lib
-)
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES hiwonder_sdk 
-  CATKIN_DEPENDS rospy
-#  DEPENDS system_lib
+find_package(ament_cmake REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+
+install(
+  DIRECTORY src/armpi_fpv_common/
+  DESTINATION lib/python3.12/site-packages/armpi_fpv_common
+  PATTERN "__pycache__" EXCLUDE
 )
 
-###########
-## Build ##
-###########
-
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+ament_package()

@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "hiwonder_servo_msgs/msg/CommandDuration",
+      "fields": [
+        {
+          "name": "data",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "duration",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "hiwonder_servo_msgs/msg/CommandDuration",
+      "hash_string": "RIHS01_0c8b1e3d879d5b007e3ab4856e31135f7934224682501a72aba41d7b0f423600"
+    }
+  ]
+}

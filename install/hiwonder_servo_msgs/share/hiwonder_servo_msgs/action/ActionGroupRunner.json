@@ -1,0 +1,552 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner",
+      "fields": [
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Goal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Result"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Feedback"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "send_goal_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "get_result_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_FeedbackMessage"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Feedback",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "step",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_FeedbackMessage",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "feedback",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Feedback"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Response",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Result"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Goal",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "repeat",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Result",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Goal"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Response",
+        "fields": [
+          {
+            "name": "accepted",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner",
+      "hash_string": "RIHS01_0c26814181263a4ac0f557b8eeaf85a4daacd3a0e62ceac1332c207b737b7972"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Feedback",
+      "hash_string": "RIHS01_39f580bdcdabaa29eee92c896981f40f2c6a8c52b85e85e6eed8b6047824030d"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_FeedbackMessage",
+      "hash_string": "RIHS01_85274b09759cd879f43df76336252fc7b21b06d2c91056a7e44414b9e4d4dfd4"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult",
+      "hash_string": "RIHS01_51de9906890dbbd4d3b81e4729d7b4906dbd0e4256e92d441e7dd061f4ae3e78"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Event",
+      "hash_string": "RIHS01_c1624a3aed8c2968fa8ac2022e3840a04efbd2874dccaab28b968b3e441e72db"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Request",
+      "hash_string": "RIHS01_fd9130374c16905d81226bfaafea6cb301fe9dc0eccecc2ef8ee95517e93dc0e"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_GetResult_Response",
+      "hash_string": "RIHS01_c64afde2af9a2a64a9c2b14a1f18733b54ccee39a7a51930337e31a7653b8c3c"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Goal",
+      "hash_string": "RIHS01_fae1d4844812d6cb909904bd5344e31bfa1e9a4714a94ecc40a666d6f3e044a9"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_Result",
+      "hash_string": "RIHS01_e40e1188ea30f45798399a8a9c308869441e026c1a21fa67d775747fb8652e05"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal",
+      "hash_string": "RIHS01_418542a55c855955b4a8545875cd1ca493b93e1736ac1e7abd9808724d471a67"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Event",
+      "hash_string": "RIHS01_ea1ca4a016279bac7a9511acbf986fa1ed433b5bdfb507f9df264cfb4e348a39"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Request",
+      "hash_string": "RIHS01_5906bf3cb80ffb936e4677aae2b407858bdebfc1c7fe49a741ed473d4d3da109"
+    },
+    {
+      "type_name": "hiwonder_servo_msgs/action/ActionGroupRunner_SendGoal_Response",
+      "hash_string": "RIHS01_b473ad3d1e3ef46aae2258f5e02a5a9ca7e964852b3eddcf4400cc404be5e5c1"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

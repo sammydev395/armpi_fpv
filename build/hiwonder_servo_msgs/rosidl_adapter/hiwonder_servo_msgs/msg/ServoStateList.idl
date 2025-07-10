@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from hiwonder_servo_msgs/msg/ServoStateList.msg
+// generated code does not contain a copyright notice
+
+#include "hiwonder_servo_msgs/msg/ServoState.idl"
+
+module hiwonder_servo_msgs {
+  module msg {
+    struct ServoStateList {
+      sequence<hiwonder_servo_msgs::msg::ServoState> servo_states;
+    };
+  };
+};
