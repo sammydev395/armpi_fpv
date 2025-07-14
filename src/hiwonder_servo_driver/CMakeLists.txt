@@ -23,3 +23,5 @@ install(PROGRAMS
 
 # Export dependencies
 ament_export_dependencies(rclpy diagnostic_msgs std_msgs)
+
+ament_package()

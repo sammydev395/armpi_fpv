@@ -4,57 +4,58 @@
 # @Date: 2023/09/18
 # stm32 ros package
 import math
-import rospy
+import rclpy
+from rclpy.node import Node
 from sensor_msgs.msg import Imu, Joy
 from std_msgs.msg import UInt16, Bool 
 from ros_robot_controller.ros_robot_controller_sdk import Board
 from ros_robot_controller.srv import GetBusServoState, GetPWMServoState
 from ros_robot_controller.msg import ButtonState, BuzzerState, LedState, MotorsState, BusServoState, SetBusServoState, SetPWMServoState, Sbus, OLEDState, RGBsState
 
-class ROSRobotController:
+class ROSRobotController(Node):
     gravity = 9.80665
     def __init__(self, name):
-        self.name = name
-        rospy.init_node(self.name)
+        super().__init__(name)
         
         self.board = Board()
         self.board.enable_reception()
 
-        self.IMU_FRAME = rospy.get_param('~imu_frame', 'imu_link')
-        freq = rospy.get_param('~freq', 100)
+        self.IMU_FRAME = self.get_parameter_or('imu_frame', 'imu_link').value
+        freq = self.get_parameter_or('freq', 100).value
 
-        imu_pub = rospy.Publisher('~imu_raw', Imu, queue_size=1)
-        joy_pub = rospy.Publisher('~joy', Joy, queue_size=1)
-        sbus_pub = rospy.Publisher('~sbus', Sbus, queue_size=1)
-        button_pub = rospy.Publisher('~button', ButtonState, queue_size=1)
-        battery_pub = rospy.Publisher('~battery', UInt16, queue_size=1)
-        rospy.Subscriber('~set_led', LedState, self.set_led_state, queue_size=1)
-        rospy.Subscriber('~set_buzzer', BuzzerState, self.set_buzzer_state, queue_size=1)
-        rospy.Subscriber('~set_oled', OLEDState, self.set_oled_state, queue_size=1)
-        rospy.Subscriber('~set_motor', MotorsState, self.set_motor_state, queue_size=1)
-        rospy.Subscriber('~set_rgb', RGBsState, self.set_rgb_state, queue_size=1)
-        rospy.Subscriber('~set_motor_duty', MotorsState, self.set_motor_duty_state, queue_size=1)
-        rospy.Subscriber('~bus_servo/set_state', SetBusServoState, self.set_bus_servo_state, queue_size=10)
-        rospy.Subscriber('~enable_reception', Bool, self.enable_reception, queue_size=1)
-        rospy.Service('~bus_servo/get_state', GetBusServoState, self.get_bus_servo_state)
-        rospy.Subscriber('~pwm_servo/set_state', SetPWMServoState, self.set_pwm_servo_state, queue_size=10)
-        rospy.Service('~pwm_servo/get_state', GetPWMServoState, self.get_pwm_servo_state)
-        rospy.sleep(0.2)
+        self.imu_pub = self.create_publisher(Imu, '~/imu_raw', 1)
+        self.joy_pub = self.create_publisher(Joy, '~/joy', 1)
+        self.sbus_pub = self.create_publisher(Sbus, '~/sbus', 1)
+        self.button_pub = self.create_publisher(ButtonState, '~/button', 1)
+        self.battery_pub = self.create_publisher(UInt16, '~/battery', 1)
+        self.create_subscription(LedState, '~/set_led', self.set_led_state, 1)
+        self.create_subscription(BuzzerState, '~/set_buzzer', self.set_buzzer_state, 1)
+        self.create_subscription(OLEDState, '~/set_oled', self.set_oled_state, 1)
+        self.create_subscription(MotorsState, '~/set_motor', self.set_motor_state, 1)
+        self.create_subscription(RGBsState, '~/set_rgb', self.set_rgb_state, 1)
+        self.create_subscription(MotorsState, '~/set_motor_duty', self.set_motor_duty_state, 1)
+        self.create_subscription(SetBusServoState, '~/bus_servo/set_state', self.set_bus_servo_state, 10)
+        self.create_subscription(Bool, '~/enable_reception', self.enable_reception, 1)
+        self.create_service(GetBusServoState, '~/bus_servo/get_state', self.get_bus_servo_state)
+        self.create_subscription(SetPWMServoState, '~/pwm_servo/set_state', self.set_pwm_servo_state, 10)
+        self.create_service(GetPWMServoState, '~/pwm_servo/get_state', self.get_pwm_servo_state)
         
-        rate = rospy.Rate(freq)
+        # Wait a bit for setup
+        rclpy.sleep(0.2)
+        
+        self.timer = self.create_timer(1.0/freq, self.timer_callback)
         self.board.pwm_servo_set_offset(1, 0)
         self.board.set_motor_speed([[1, 0], [2, 0], [3, 0], [4, 0]])
 
-        rospy.set_param('~init_finish', True)
-        while not rospy.is_shutdown():
-            self.pub_button_data(button_pub)
-            self.pub_joy_data(joy_pub)
-            self.pub_imu_data(imu_pub)
-            self.pub_sbus_data(sbus_pub)
-            self.pub_battery_data(battery_pub)
-            rate.sleep()
-        rospy.loginfo("------motor stop-------")
-        self.board.set_motor_speed([[1, 0], [2, 0], [3, 0], [4, 0]])
+        self.set_parameter(rclpy.Parameter('init_finish', value=True))
+        self.get_logger().info("ROS Robot Controller initialized")
+
+    def timer_callback(self):
+        self.pub_button_data()
+        self.pub_joy_data()
+        self.pub_imu_data()
+        self.pub_sbus_data()
+        self.pub_battery_data()
 
     def enable_reception(self, msg):
         self.board.enable_reception(msg.data)
@@ -92,9 +93,9 @@ class ROSRobotController:
     def set_motor_duty_state(self, msg):
         self.board.set_motor_duty([msg.id, msg.duty])
 
-    def get_pwm_servo_state(self, msg):
+    def get_pwm_servo_state(self, request, response):
         states = []
-        for i in msg.cmd:
+        for i in request.cmd:
             data = PWMServoState()
             if i.get_position:
                 state = self.board.pwm_servo_read_position(i.id)
@@ -105,7 +106,9 @@ class ROSRobotController:
                 if state is not None:
                     data.offset = state
             states.append(data)
-        return [True, states]
+        response.success = True
+        response.states = states
+        return response
 
     def set_bus_servo_state(self, msg):
         data = []
@@ -145,9 +148,9 @@ class ROSRobotController:
         if servo_id != []:    
             self.board.bus_servo_stop(servo_id)
 
-    def get_bus_servo_state(self, msg):
+    def get_bus_servo_state(self, request, response):
         states = []
-        for i in msg.cmd:
+        for i in request.cmd:
             data = BusServoState()
             if i.get_id:
                 state = self.board.bus_servo_read_id(i.id)
@@ -187,45 +190,47 @@ class ROSRobotController:
                 if state is not None:
                     data.enable_torque = state
             states.append(data)
-        return [True, states]
+        response.success = True
+        response.states = states
+        return response
 
-    def pub_battery_data(self, pub):
+    def pub_battery_data(self):
         data = self.board.get_battery()
         if data is not None:
-            pub.publish(data)
+            self.battery_pub.publish(data)
 
-    def pub_button_data(self, pub):
+    def pub_button_data(self):
         data = self.board.get_button()
         if data is not None:
             msg = ButtonState()
             msg.id = data[0]
             msg.state = data[1]
-            pub.publish(msg)
+            self.button_pub.publish(msg)
 
-    def pub_joy_data(self, pub):
+    def pub_joy_data(self):
         data = self.board.get_gamepad()
         if data is not None:
             msg = Joy()
             msg.axes = data[0]
             msg.buttons = data[1]
-            msg.header.stamp = rospy.Time.now()
-            pub.publish(msg) 
+            msg.header.stamp = self.get_clock().now().to_msg()
+            self.joy_pub.publish(msg) 
 
-    def pub_sbus_data(self, pub):
+    def pub_sbus_data(self):
         data = self.board.get_sbus()
         if data is not None:
             msg = Sbus()
             msg.channel = data
-            msg.header.stamp = rospy.Time.now()
-            pub.publish(msg) 
+            msg.header.stamp = self.get_clock().now().to_msg()
+            self.sbus_pub.publish(msg) 
 
-    def pub_imu_data(self, pub):
+    def pub_imu_data(self):
         data = self.board.get_imu()
         if data is not None:
             ax, ay, az, gx, gy, gz = data
             msg = Imu()
             msg.header.frame_id = self.IMU_FRAME
-            msg.header.stamp = rospy.Time.now()
+            msg.header.stamp = self.get_clock().now().to_msg()
 
             msg.orientation.w = 0
             msg.orientation.x = 0
@@ -243,7 +248,10 @@ class ROSRobotController:
             msg.orientation_covariance = [0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01]
             msg.angular_velocity_covariance = [0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01]
             msg.linear_acceleration_covariance = [0.0004, 0, 0, 0, 0.0004, 0, 0, 0, 0.004]
-            pub.publish(msg)
+            self.imu_pub.publish(msg)
 
 if __name__ == '__main__':
-    ROSRobotController('ros_robot_controller')
+    rclpy.init()
+    node = ROSRobotController('ros_robot_controller')
+    rclpy.spin(node)
+    rclpy.shutdown()

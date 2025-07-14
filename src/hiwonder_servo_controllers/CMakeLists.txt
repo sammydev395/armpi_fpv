@@ -15,7 +15,6 @@ find_package(hiwonder_servo_driver REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
-find_package(rclpy_action REQUIRED)
 
 # Install Python package
 ament_python_install_package(${PROJECT_NAME} PACKAGE_DIR src/${PROJECT_NAME})
@@ -28,4 +27,4 @@ install(PROGRAMS
 )
 
 # Export dependencies
-ament_export_dependencies(rclpy control_msgs diagnostic_msgs hiwonder_servo_msgs hiwonder_servo_driver std_msgs trajectory_msgs action_msgs rclpy_action)
+ament_export_dependencies(rclpy control_msgs diagnostic_msgs hiwonder_servo_msgs hiwonder_servo_driver std_msgs trajectory_msgs action_msgs)
