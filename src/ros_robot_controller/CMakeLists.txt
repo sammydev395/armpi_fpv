@@ -36,9 +36,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     geometry_msgs
 )
 
-# Install Python package
-ament_python_install_package(${PROJECT_NAME} PACKAGE_DIR src/${PROJECT_NAME})
-
 # Install Python scripts
 install(PROGRAMS
   scripts/ros_robot_controller_node.py
