@@ -290,7 +290,8 @@ class ArduCamCSITester:
     def cleanup(self):
         """Clean up resources"""
         if hasattr(self, 'camera') and self.camera:
-            self.camera.release()
+            self.camera.release() 
+
         cv2.destroyAllWindows()
 
 def main():
