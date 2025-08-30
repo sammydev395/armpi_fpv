@@ -22,7 +22,14 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Install config files
+install(DIRECTORY
+  config
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 # Export dependencies
 ament_export_dependencies(rclpy diagnostic_msgs hiwonder_servo_msgs hiwonder_servo_driver std_msgs trajectory_msgs action_msgs)
 
-# Python package will be installed via setup.py
+# This MUST be the last line - generates setup files
+ament_package()

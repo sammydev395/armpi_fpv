@@ -43,5 +43,5 @@ install(DIRECTORY launch/
   DESTINATION share/${PROJECT_NAME}/launch
 )
 
-
-
+# This MUST be the last line - generates setup files
+ament_package()

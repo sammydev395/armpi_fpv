@@ -8,7 +8,7 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Imu, Joy
 from std_msgs.msg import UInt16, Bool 
-from ros_robot_controller.ros_robot_controller_sdk import Board
+from common.ros_robot_controller_sdk import Board
 from ros_robot_controller.srv import GetBusServoState, GetPWMServoState
 from ros_robot_controller.msg import ButtonState, BuzzerState, LedState, MotorsState, BusServoState, SetBusServoState, SetPWMServoState, Sbus, OLEDState, RGBsState
 
@@ -20,8 +20,11 @@ class ROSRobotController(Node):
         self.board = Board()
         self.board.enable_reception()
 
-        self.IMU_FRAME = self.get_parameter_or('imu_frame', 'imu_link').value
-        freq = self.get_parameter_or('freq', 100).value
+        # Declare and get parameters for ROS 2
+        self.declare_parameter('imu_frame', 'imu_link')
+        self.declare_parameter('freq', 100)
+        self.IMU_FRAME = self.get_parameter('imu_frame').get_parameter_value().string_value
+        freq = self.get_parameter('freq').get_parameter_value().integer_value
 
         self.imu_pub = self.create_publisher(Imu, '~/imu_raw', 1)
         self.joy_pub = self.create_publisher(Joy, '~/joy', 1)
@@ -41,13 +44,15 @@ class ROSRobotController(Node):
         self.create_service(GetPWMServoState, '~/pwm_servo/get_state', self.get_pwm_servo_state)
         
         # Wait a bit for setup
-        rclpy.sleep(0.2)
+        import time
+        time.sleep(0.2)
         
         self.timer = self.create_timer(1.0/freq, self.timer_callback)
         self.board.pwm_servo_set_offset(1, 0)
         self.board.set_motor_speed([[1, 0], [2, 0], [3, 0], [4, 0]])
 
-        self.set_parameter(rclpy.Parameter('init_finish', value=True))
+        # ROS 2 parameter setting - declare and set
+        self.declare_parameter('init_finish', True)
         self.get_logger().info("ROS Robot Controller initialized")
 
     def timer_callback(self):
@@ -197,7 +202,9 @@ class ROSRobotController(Node):
     def pub_battery_data(self):
         data = self.board.get_battery()
         if data is not None:
-            self.battery_pub.publish(data)
+            msg = UInt16()
+            msg.data = int(data) if isinstance(data, (int, float)) else 0
+            self.battery_pub.publish(msg)
 
     def pub_button_data(self):
         data = self.board.get_button()
