@@ -42,10 +42,11 @@ def generate_launch_description():
         ])
     )
     
-    usb_cam_launch = IncludeLaunchDescription(
+    # ArduCam CSI camera launch (replaces HiWonder USB camera)
+    arducam_csi_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             pkg_share,
-            '/launch/usb_cam.launch.py'
+            '/launch/arducam_csi.launch.py'
         ])
     )
     
@@ -136,7 +137,7 @@ def generate_launch_description():
         ros_robot_controller_launch,
         hiwonder_servo_controllers_launch,
         armpi_fpv_kinematics_launch,
-        usb_cam_launch,
+        arducam_csi_launch,
         lab_config_launch,
         rosbridge_launch,
         web_video_server_node,

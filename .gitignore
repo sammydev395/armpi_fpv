@@ -39,3 +39,17 @@ Thumbs.db
 # Additional directories
 docker_src/
 software/
+
+# Test and temporary files
+test_*.jpg
+test_*.h264
+test_*.raw
+
+# Camera preview files
+*.jpg
+*.h264
+*.raw
+
+# ROS2 specific
+.colcon_install_layout
+COLCON_IGNORE
